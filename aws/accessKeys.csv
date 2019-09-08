@@ -1,4 +1,0 @@
-Access key ID,Secret access key
-AKIAQYRCWPMEZ6FTQUE7,uE18O5UxFdGIDurUW2HpRKmPRk6cYpzpMKvYGvwJ
-
-serverless config credentials --provider aws --key AKIAQYRCWPMEZ6FTQUE7 --secrect uE18O5UxFdGIDurUW2HpRKmPRk6cYpzpMKvYGvwJ --profile serverless-admin
