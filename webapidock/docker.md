@@ -80,7 +80,7 @@ Removing network webapidock_default
 $ docker-compose up -d
 Creating network "webapidock_default" with the default driver
 Creating sql-server-db ... done
-# see the port and hhost of the container
+# see the port and host of the container
 RIENGLM008:webapidock nbontha$ docker port b1cd94146e7d     
 1433/tcp -> 0.0.0.0:1433
 
@@ -107,3 +107,8 @@ docker run -d -p 8080:80 --name app nat2k5us/webapidock
 docker push nat2k5us/webapidock
 
 docker-compose up -d
+
+# commands to control sql server linux instance
+sudo systemctl stop mssql-server
+sudo systemctl start mssql-server
+sudo systemctl restart mssql-server
