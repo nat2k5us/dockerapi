@@ -1,7 +1,10 @@
 # dockerapi
 RIENGLM008:webapidock nbontha$ docker build -t webapidock .
+
 Sending build context to Docker daemon  1.068MB
+
 Step 1/11 : FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
+
  ---> f13ac9d68148
 Step 2/11 : WORKDIR /app
  ---> Using cache
