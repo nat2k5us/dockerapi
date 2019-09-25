@@ -111,5 +111,7 @@ docker-compose up -d
 
 # commands to control sql server linux instance
 sudo systemctl stop mssql-server
+
 sudo systemctl start mssql-server
+
 sudo systemctl restart mssql-server
