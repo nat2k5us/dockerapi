@@ -4,10 +4,15 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+      <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
+      <UserSecretsId>dba26643-1ea5-4596-aa9c-d43505f19f51</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.App">
+      <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+      <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Api.Analyzers" Version="2.2.6" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
@@ -21,7 +26,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
   </ItemGroup>
+  
   <ItemGroup>
-    <ProjectReference Include="../App.DAL/App.Dal.csproj" />
+    <ProjectReference Include="..\App.DAL\App.DAL.csproj" />
   </ItemGroup>
 </Project>

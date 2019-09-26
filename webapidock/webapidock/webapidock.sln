@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapidock", "webapidock.csproj", "{7B1E6B51-9CA5-4D89-9D0B-5A1A55C41612}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5604BDE3-720E-4A4B-9779-05B0C50DFA0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.DAL", "..\App.DAL\App.DAL.csproj", "{728316A8-F891-4F09-8D65-89E226DB9F9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B1E6B51-9CA5-4D89-9D0B-5A1A55C41612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1E6B51-9CA5-4D89-9D0B-5A1A55C41612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1E6B51-9CA5-4D89-9D0B-5A1A55C41612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1E6B51-9CA5-4D89-9D0B-5A1A55C41612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5604BDE3-720E-4A4B-9779-05B0C50DFA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5604BDE3-720E-4A4B-9779-05B0C50DFA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5604BDE3-720E-4A4B-9779-05B0C50DFA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5604BDE3-720E-4A4B-9779-05B0C50DFA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728316A8-F891-4F09-8D65-89E226DB9F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728316A8-F891-4F09-8D65-89E226DB9F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728316A8-F891-4F09-8D65-89E226DB9F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728316A8-F891-4F09-8D65-89E226DB9F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
