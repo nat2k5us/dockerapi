@@ -47,6 +47,7 @@ Successfully tagged webapidock:latest
 RIENGLM008:webapidock nbontha$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 RIENGLM008:webapidock nbontha$ docker run -d -p 8080:80 --name app webapidock
+docker run -dit  -p 8088:80 --name app webapidock
 7baec38453ee4e6ab3d71244126972e5634962d55baeb51f433d1706a090ab1b
 
 => Publish to Docker Hub
