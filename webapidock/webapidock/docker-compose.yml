@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapidock:
+    image: ${DOCKER_REGISTRY-}webapidock
+    build:
+      context: .
+      dockerfile: ./Dockerfile
