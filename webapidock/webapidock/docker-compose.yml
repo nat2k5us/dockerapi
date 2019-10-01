@@ -1,8 +1,18 @@
-version: '3.4'
-
+version: "3.2"
 services:
-  webapidock:
-    image: ${DOCKER_REGISTRY-}webapidock
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    webapidock:
+        build:
+            dockerfile: ../Dockerfile
+            context: .
+        ports:
+            - 8080:80
+        depends_on:
+            - sqlserver
+    sqlserver:
+        image: microsoft/mssql-server-linux
+        restart: always
+        ports:
+            - 1833:1433
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=Password12!
