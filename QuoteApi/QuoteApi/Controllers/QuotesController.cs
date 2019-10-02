@@ -17,7 +17,7 @@ namespace QuoteApi.Controllers
         public QuotesController(IQuoteRepository repo)
         {
             this.quoteRepository = repo;
-           
+         
         }
 
         // GET api/values

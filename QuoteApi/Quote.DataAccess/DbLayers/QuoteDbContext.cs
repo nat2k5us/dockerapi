@@ -9,13 +9,16 @@ namespace Quote.DataAccess.DbLayers
 {
     public class QuoteDbContext : DbContext
     {
-        private readonly string connectionString;
+          private readonly string connectionString;
         public QuoteDbContext(string connectionString)
+        : base(GetOptions(connectionString))
         {
-            this.connectionString = connectionString;
+             this.connectionString = connectionString;
         }
-        public QuoteDbContext()
+
+        private static DbContextOptions GetOptions(string connectionString)
         {
+            return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
         }
 
         public QuoteDbContext(DbContextOptions<QuoteDbContext> options)
@@ -30,8 +33,9 @@ namespace Quote.DataAccess.DbLayers
             if (!optionsBuilder.IsConfigured)
             {
                 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=10.9.30.23,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
+                // optionsBuilder.UseSqlServer("Data Source=10.9.30.23,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
                 // optionsBuilder.UseSqlServer("Data Source=192.168.86.71,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 
@@ -47,8 +51,8 @@ namespace Quote.DataAccess.DbLayers
         public QuoteDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<QuoteDbContext>();
-
             optionsBuilder.UseSqlServer("Data Source=10.9.30.23,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
+            // optionsBuilder.UseSqlServer("Data Source=10.9.30.23,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
             //  optionsBuilder.UseSqlServer("Data Source=192.168.86.71,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
             return new QuoteDbContext(optionsBuilder.Options);
         }

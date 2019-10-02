@@ -2918,3 +2918,315 @@ WHERE [c].[Symbol] = @__id_0" (0723d8ff)
 2019-10-02T16:01:22.6106068+00:00 0HLQ79IIPUMJV:00000005 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 7076.2437ms (afa2e885)
 2019-10-02T16:01:22.6135995+00:00 0HLQ79IIPUMJV:00000005 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
 2019-10-02T16:01:22.6182982+00:00 0HLQ79IIPUMJV:00000005 [INF] Request finished in 7096.5311ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T16:49:47.9753370+00:00  [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T16:49:48.3620925+00:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T16:49:48.3714754+00:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T16:49:48.3883734+00:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2019-10-02T16:49:48.3993670+00:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2019-10-02T16:49:48.4983036+00:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Quotes] AS [q])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-10-02T16:49:48.7559281+00:00 0HLQ7B24OFBH2:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T16:49:48.8477005+00:00 0HLQ7B24OFBH2:00000001 [INF] Request finished in 92.965ms 404  (791a596a)
+2019-10-02T16:49:48.9972926+00:00 0HLQ7B24OFBH3:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T16:49:49.0203696+00:00 0HLQ7B24OFBH3:00000001 [INF] Request finished in 3.8147ms 404  (791a596a)
+2019-10-02T16:50:03.9602969+00:00 0HLQ7B24OFBH3:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/index.html   (ca22a1cb)
+2019-10-02T16:50:04.0515127+00:00 0HLQ7B24OFBH3:00000002 [INF] Request finished in 94.8006ms 200 text/html (791a596a)
+2019-10-02T16:50:04.3471177+00:00 0HLQ7B24OFBH3:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/v1/swagger.json   (ca22a1cb)
+2019-10-02T16:50:04.4553612+00:00 0HLQ7B24OFBH3:00000003 [INF] Request finished in 129.5312ms 200 application/json;charset=utf-8 (791a596a)
+2019-10-02T16:50:15.3784322+00:00 0HLQ7B24OFBH3:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes   (ca22a1cb)
+2019-10-02T16:50:15.3840649+00:00 0HLQ7B24OFBH3:00000004 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T16:50:15.4180485+00:00 0HLQ7B24OFBH3:00000004 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get()" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T16:50:15.4286495+00:00 0HLQ7B24OFBH3:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T16:50:15.4459654+00:00 0HLQ7B24OFBH3:00000004 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T16:50:15.4902044+00:00 0HLQ7B24OFBH3:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[Description], [q].[LastAccessed], [q].[Price], [q].[Symbol]
+FROM [Quotes] AS [q]" (0723d8ff)
+2019-10-02T16:50:15.5865932+00:00 0HLQ7B24OFBH3:00000004 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 134.7244ms. (50a9e262)
+2019-10-02T16:50:15.6006013+00:00 0HLQ7B24OFBH3:00000004 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Quote.DataAccess.Models.Quote, Quote.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-02T16:50:15.6186941+00:00 0HLQ7B24OFBH3:00000004 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 194.5676ms (afa2e885)
+2019-10-02T16:50:15.6230696+00:00 0HLQ7B24OFBH3:00000004 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T16:50:15.6308938+00:00 0HLQ7B24OFBH3:00000004 [INF] Request finished in 256.6613ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T16:51:18.0100904+00:00 0HLQ7B24OFBH3:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes/amzn   (ca22a1cb)
+2019-10-02T16:51:18.0138461+00:00 0HLQ7B24OFBH3:00000005 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T16:51:18.0585058+00:00 0HLQ7B24OFBH3:00000005 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String)" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T16:51:18.0637209+00:00 0HLQ7B24OFBH3:00000005 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T16:51:18.0778777+00:00 0HLQ7B24OFBH3:00000005 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T16:51:18.1144940+00:00 0HLQ7B24OFBH3:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@__id_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Description], [c].[LastAccessed], [c].[Price], [c].[Symbol]
+FROM [Quotes] AS [c]
+WHERE [c].[Symbol] = @__id_0" (0723d8ff)
+2019-10-02T16:51:18.1354305+00:00 0HLQ7B24OFBH3:00000005 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 54.3338ms. (50a9e262)
+2019-10-02T16:51:18.1398668+00:00 0HLQ7B24OFBH3:00000005 [INF] Executing ObjectResult, writing value of type '"Quote.DataAccess.Models.Quote"'. (8a1b66c8)
+2019-10-02T16:51:18.1645949+00:00 0HLQ7B24OFBH3:00000005 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 82.1274ms (afa2e885)
+2019-10-02T16:51:18.1710258+00:00 0HLQ7B24OFBH3:00000005 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T16:51:18.1751373+00:00 0HLQ7B24OFBH3:00000005 [INF] Request finished in 163.5555ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T19:53:09.0671913+00:00  [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:53:09.4313938+00:00  [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T19:53:09.4397831+00:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T19:53:09.4529910+00:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2019-10-02T19:53:09.4648874+00:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2019-10-02T19:53:09.5673712+00:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Quotes] AS [q])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-10-02T19:53:09.8957210+00:00 0HLQ7E8JBDO54:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:53:09.9450993+00:00 0HLQ7E8JBDO54:00000001 [INF] Request finished in 84.2788ms 404  (791a596a)
+2019-10-02T19:53:10.0894004+00:00 0HLQ7E8JBDO56:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:53:10.1131499+00:00 0HLQ7E8JBDO56:00000001 [INF] Request finished in 4.3345ms 404  (791a596a)
+2019-10-02T19:53:27.4778053+00:00 0HLQ7E8JBDO56:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/index.html   (ca22a1cb)
+2019-10-02T19:53:27.5893999+00:00 0HLQ7E8JBDO56:00000002 [INF] Request finished in 116.194ms 200 text/html (791a596a)
+2019-10-02T19:53:27.9012980+00:00 0HLQ7E8JBDO56:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/v1/swagger.json   (ca22a1cb)
+2019-10-02T19:53:27.9933411+00:00 0HLQ7E8JBDO56:00000003 [INF] Request finished in 111.1928ms 200 application/json;charset=utf-8 (791a596a)
+2019-10-02T19:53:34.5778897+00:00 0HLQ7E8JBDO56:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes   (ca22a1cb)
+2019-10-02T19:53:34.5844422+00:00 0HLQ7E8JBDO56:00000004 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T19:53:34.6199019+00:00 0HLQ7E8JBDO56:00000004 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get()" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T19:53:34.6745443+00:00 0HLQ7E8JBDO56:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:53:34.7032571+00:00 0HLQ7E8JBDO56:00000004 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T19:53:34.7573495+00:00 0HLQ7E8JBDO56:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[Description], [q].[LastAccessed], [q].[Price], [q].[Symbol]
+FROM [Quotes] AS [q]" (0723d8ff)
+2019-10-02T19:53:34.8507736+00:00 0HLQ7E8JBDO56:00000004 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 141.645ms. (50a9e262)
+2019-10-02T19:53:34.8647976+00:00 0HLQ7E8JBDO56:00000004 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Quote.DataAccess.Models.Quote, Quote.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-02T19:53:34.8818566+00:00 0HLQ7E8JBDO56:00000004 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 256.6048ms (afa2e885)
+2019-10-02T19:53:34.8865043+00:00 0HLQ7E8JBDO56:00000004 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T19:53:34.8930539+00:00 0HLQ7E8JBDO56:00000004 [INF] Request finished in 318.2544ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T19:54:41.6447028+00:00  [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:54:42.6890420+00:00  [INF] Executed DbCommand ("548"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [MyTestDB];" (0723d8ff)
+2019-10-02T19:54:42.8911895+00:00  [INF] Executed DbCommand ("198"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MyTestDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;" (0723d8ff)
+2019-10-02T19:54:43.0291784+00:00  [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);" (0723d8ff)
+2019-10-02T19:54:43.0569293+00:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T19:54:43.0689436+00:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2019-10-02T19:54:43.0791584+00:00  [INF] Applying migration '"20191002040512_initialquote"'. (0e2ac64d)
+2019-10-02T19:54:43.1006794+00:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Quotes] (
+    [Id] int NOT NULL IDENTITY,
+    [Symbol] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [Price] float NOT NULL,
+    [LastAccessed] datetime2 NOT NULL,
+    CONSTRAINT [PK_Quotes] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2019-10-02T19:54:43.1071008+00:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191002040512_initialquote', N'2.2.6-servicing-10079');" (0723d8ff)
+2019-10-02T19:54:43.1927185+00:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Quotes] AS [q])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-10-02T19:54:43.3068251+00:00  [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Double), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Double), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Double), @p19='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Quotes] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3),
+(@p16, @p17, @p18, @p19, 4)) AS i ([Description], [LastAccessed], [Price], [Symbol], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Description], [LastAccessed], [Price], [Symbol])
+VALUES (i.[Description], i.[LastAccessed], i.[Price], i.[Symbol])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Quotes] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2019-10-02T19:54:43.5734476+00:00 0HLQ7E9F8R29K:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:54:43.6728201+00:00 0HLQ7E9F8R29K:00000001 [INF] Request finished in 80.214ms 404  (791a596a)
+2019-10-02T19:54:43.8044681+00:00 0HLQ7E9F8R29L:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:54:43.8293778+00:00 0HLQ7E9F8R29L:00000001 [INF] Request finished in 4.0565ms 404  (791a596a)
+2019-10-02T19:54:48.7522866+00:00 0HLQ7E9F8R29L:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/index.html   (ca22a1cb)
+2019-10-02T19:54:48.8427600+00:00 0HLQ7E9F8R29L:00000002 [INF] Request finished in 91.129ms 200 text/html (791a596a)
+2019-10-02T19:54:49.1104048+00:00 0HLQ7E9F8R29L:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/v1/swagger.json   (ca22a1cb)
+2019-10-02T19:54:49.1182504+00:00 0HLQ7E9F8R29M:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/favicon-32x32.png   (ca22a1cb)
+2019-10-02T19:54:49.1331019+00:00 0HLQ7E9F8R29M:00000001 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2019-10-02T19:54:49.1366355+00:00 0HLQ7E9F8R29M:00000001 [INF] Request finished in 20.4532ms 200 image/png (791a596a)
+2019-10-02T19:54:49.2223712+00:00 0HLQ7E9F8R29L:00000003 [INF] Request finished in 114.0084ms 200 application/json;charset=utf-8 (791a596a)
+2019-10-02T19:54:53.1779716+00:00 0HLQ7E9F8R29L:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes   (ca22a1cb)
+2019-10-02T19:54:53.1858736+00:00 0HLQ7E9F8R29L:00000004 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T19:54:53.2194192+00:00 0HLQ7E9F8R29L:00000004 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get()" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T19:54:53.2338939+00:00 0HLQ7E9F8R29L:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:54:53.2519216+00:00 0HLQ7E9F8R29L:00000004 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T19:54:53.3015364+00:00 0HLQ7E9F8R29L:00000004 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[Description], [q].[LastAccessed], [q].[Price], [q].[Symbol]
+FROM [Quotes] AS [q]" (0723d8ff)
+2019-10-02T19:54:53.3951954+00:00 0HLQ7E9F8R29L:00000004 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 133.5702ms. (50a9e262)
+2019-10-02T19:54:53.4132983+00:00 0HLQ7E9F8R29L:00000004 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Quote.DataAccess.Models.Quote, Quote.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-02T19:54:53.4303712+00:00 0HLQ7E9F8R29L:00000004 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 204.8838ms (afa2e885)
+2019-10-02T19:54:53.4363880+00:00 0HLQ7E9F8R29L:00000004 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T19:54:53.4435549+00:00 0HLQ7E9F8R29L:00000004 [INF] Request finished in 266.2996ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T19:56:09.6160697+00:00  [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:56:10.5471864+00:00  [INF] Executed DbCommand ("467"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [MyTestDB];" (0723d8ff)
+2019-10-02T19:56:10.7306116+00:00  [INF] Executed DbCommand ("178"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MyTestDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;" (0723d8ff)
+2019-10-02T19:56:10.8482324+00:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);" (0723d8ff)
+2019-10-02T19:56:10.9016806+00:00  [INF] Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T19:56:10.9120635+00:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2019-10-02T19:56:10.9222046+00:00  [INF] Applying migration '"20191002040512_initialquote"'. (0e2ac64d)
+2019-10-02T19:56:10.9625627+00:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Quotes] (
+    [Id] int NOT NULL IDENTITY,
+    [Symbol] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [Price] float NOT NULL,
+    [LastAccessed] datetime2 NOT NULL,
+    CONSTRAINT [PK_Quotes] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2019-10-02T19:56:10.9716800+00:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191002040512_initialquote', N'2.2.6-servicing-10079');" (0723d8ff)
+2019-10-02T19:56:11.0547963+00:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Quotes] AS [q])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-10-02T19:56:11.1679895+00:00  [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Double), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Double), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Double), @p19='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Quotes] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3),
+(@p16, @p17, @p18, @p19, 4)) AS i ([Description], [LastAccessed], [Price], [Symbol], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Description], [LastAccessed], [Price], [Symbol])
+VALUES (i.[Description], i.[LastAccessed], i.[Price], i.[Symbol])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Quotes] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2019-10-02T19:56:11.4165410+00:00 0HLQ7EA9EKCCU:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:56:11.4981561+00:00 0HLQ7EA9EKCCU:00000001 [INF] Request finished in 80.2634ms 404  (791a596a)
+2019-10-02T19:56:11.6958900+00:00 0HLQ7EA9EKCCV:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:56:11.7006325+00:00 0HLQ7EA9EKCCV:00000001 [INF] Request finished in 4.4381ms 404  (791a596a)
+2019-10-02T19:56:22.1237095+00:00 0HLQ7EA9EKCCV:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/index.html   (ca22a1cb)
+2019-10-02T19:56:22.2197033+00:00 0HLQ7EA9EKCCV:00000002 [INF] Request finished in 97.7555ms 200 text/html (791a596a)
+2019-10-02T19:56:22.5023324+00:00 0HLQ7EA9EKCCV:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:44346/swagger/v1/swagger.json   (ca22a1cb)
+2019-10-02T19:56:22.5937493+00:00 0HLQ7EA9EKCCV:00000003 [INF] Request finished in 92.8433ms 200 application/json;charset=utf-8 (791a596a)
+2019-10-02T19:56:29.3279395+00:00 0HLQ7EA9EKCCV:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes   (ca22a1cb)
+2019-10-02T19:56:29.3330504+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T19:56:29.3702034+00:00 0HLQ7EA9EKCCV:00000004 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get()" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T19:56:29.3826789+00:00 0HLQ7EA9EKCCV:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:56:29.4042084+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T19:56:29.5817500+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[Description], [q].[LastAccessed], [q].[Price], [q].[Symbol]
+FROM [Quotes] AS [q]" (0723d8ff)
+2019-10-02T19:56:29.6719967+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 222.2814ms. (50a9e262)
+2019-10-02T19:56:29.6924216+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Quote.DataAccess.Models.Quote, Quote.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-02T19:56:29.7099815+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 333.8184ms (afa2e885)
+2019-10-02T19:56:29.7160071+00:00 0HLQ7EA9EKCCV:00000004 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T19:56:29.7414687+00:00 0HLQ7EA9EKCCV:00000004 [INF] Request finished in 396.1378ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T19:57:22.7028717+00:00  [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:57:23.0707080+00:00  [INF] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T19:57:23.1018462+00:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" (0723d8ff)
+2019-10-02T19:57:23.1192774+00:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2019-10-02T19:57:23.1302335+00:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2019-10-02T19:57:23.2228740+00:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Quotes] AS [q])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-10-02T19:57:23.4652222+00:00 0HLQ7EAUTMFIB:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:57:23.5459179+00:00 0HLQ7EAUTMFIB:00000001 [INF] Request finished in 81.8669ms 404  (791a596a)
+2019-10-02T19:57:23.7075971+00:00 0HLQ7EAUTMFIC:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/values   (ca22a1cb)
+2019-10-02T19:57:23.7121946+00:00 0HLQ7EAUTMFIC:00000001 [INF] Request finished in 4.6114ms 404  (791a596a)
+2019-10-02T19:57:33.7131030+00:00 0HLQ7EAUTMFIC:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes   (ca22a1cb)
+2019-10-02T19:57:33.7203338+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T19:57:33.7552386+00:00 0HLQ7EAUTMFIC:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get()" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T19:57:33.7933704+00:00 0HLQ7EAUTMFIC:00000002 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:57:33.8076199+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T19:57:33.8569321+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[Description], [q].[LastAccessed], [q].[Price], [q].[Symbol]
+FROM [Quotes] AS [q]" (0723d8ff)
+2019-10-02T19:57:33.9486723+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 133.6373ms. (50a9e262)
+2019-10-02T19:57:33.9638028+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Quote.DataAccess.Models.Quote, Quote.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-02T19:57:34.0385635+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 276.82ms (afa2e885)
+2019-10-02T19:57:34.0432882+00:00 0HLQ7EAUTMFIC:00000002 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T19:57:34.0507725+00:00 0HLQ7EAUTMFIC:00000002 [INF] Request finished in 340.5816ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T19:57:57.7436878+00:00 0HLQ7EAUTMFIC:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes/msft   (ca22a1cb)
+2019-10-02T19:57:57.7472809+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T19:57:57.7694689+00:00 0HLQ7EAUTMFIC:00000003 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String)" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T19:57:57.7740127+00:00 0HLQ7EAUTMFIC:00000003 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:57:57.7900075+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T19:57:57.8557656+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executed DbCommand ("30"ms) [Parameters=["@__id_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[Description], [c].[LastAccessed], [c].[Price], [c].[Symbol]
+FROM [Quotes] AS [c]
+WHERE [c].[Symbol] = @__id_0" (0723d8ff)
+2019-10-02T19:57:57.8716053+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 78.731ms. (50a9e262)
+2019-10-02T19:57:57.8757156+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executing ObjectResult, writing value of type '"Quote.DataAccess.Models.Quote"'. (8a1b66c8)
+2019-10-02T19:57:57.9014606+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 107.7182ms (afa2e885)
+2019-10-02T19:57:57.9071194+00:00 0HLQ7EAUTMFIC:00000003 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T19:57:57.9321510+00:00 0HLQ7EAUTMFIC:00000003 [INF] Request finished in 167.447ms 200 application/json; charset=utf-8 (791a596a)
+2019-10-02T19:58:54.9301635+00:00 0HLQ7EAUTMFIC:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:44346/api/Quotes   (ca22a1cb)
+2019-10-02T19:58:54.9346520+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executing endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (500cc934)
+2019-10-02T19:58:54.9401309+00:00 0HLQ7EAUTMFIC:00000004 [INF] Route matched with "{action = \"Get\", controller = \"Quotes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get()" on controller "QuoteApi.Controllers.QuotesController" ("QuoteApi"). (122b2fdf)
+2019-10-02T19:58:54.9474971+00:00 0HLQ7EAUTMFIC:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"QuoteDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-10-02T19:58:54.9509853+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executing action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" - Validation state: Valid (dad538d7)
+2019-10-02T19:58:54.9974534+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[Description], [q].[LastAccessed], [q].[Price], [q].[Symbol]
+FROM [Quotes] AS [q]" (0723d8ff)
+2019-10-02T19:58:55.0020695+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executed action method "QuoteApi.Controllers.QuotesController.Get (QuoteApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 47.4299ms. (50a9e262)
+2019-10-02T19:58:55.0072836+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Quote.DataAccess.Models.Quote, Quote.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-10-02T19:58:55.0107216+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executed action "QuoteApi.Controllers.QuotesController.Get (QuoteApi)" in 66.9285ms (afa2e885)
+2019-10-02T19:58:55.0341242+00:00 0HLQ7EAUTMFIC:00000004 [INF] Executed endpoint '"QuoteApi.Controllers.QuotesController.Get (QuoteApi)"' (99874f2b)
+2019-10-02T19:58:55.0397519+00:00 0HLQ7EAUTMFIC:00000004 [INF] Request finished in 110.2198ms 200 application/json; charset=utf-8 (791a596a)
