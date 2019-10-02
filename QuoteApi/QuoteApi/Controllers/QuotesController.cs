@@ -22,11 +22,22 @@ namespace QuoteApi.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<IActionResult> Get()
         {
-           var data =  quoteRepository.GetAll();
-            var value1 = data.Result.ToString();
-            return new string[] { value1, "value2" };
+            var allQuotes = new List<Quote.DataAccess.Models.Quote>();
+            try
+            {
+                allQuotes = await quoteRepository.GetAll();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            return this.Ok(allQuotes);
+          
+           
+            
         }
 
         // GET api/values/5
