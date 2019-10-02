@@ -75,15 +75,15 @@ namespace QuoteApi
                 c.SwaggerEndpoint("../swagger/v1/swagger.json", "Quote API");
             });
 
-            //try
-            //{
-            //    // Comment out for Migrations to work
-            //    databaseInitializer.SeedAsync().Wait();
-            //}
-            //catch (Exception e)
-            //{
-            //    throw e;
-            //}
+            try
+            {
+                // Comment out for Migrations to work
+                databaseInitializer.SeedAsync().Wait();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
         }
     }

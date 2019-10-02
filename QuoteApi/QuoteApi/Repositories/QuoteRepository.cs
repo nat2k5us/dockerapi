@@ -1,16 +1,21 @@
 ﻿using System;
 namespace QuoteApi.Repositories
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
+    using Microsoft.EntityFrameworkCore;
     using Quote.DataAccess.DbLayers;
     using Quote.DataAccess.Models;
     using Quote.DataAccess.Repositories;
 
     public class QuoteRepository : Repository<Quote>, IQuoteRepository
     {
+        private QuoteDbContext AppContext => (QuoteDbContext)this._context;
+
         public QuoteRepository(QuoteDbContext context) : base(context)
         {
-           
+
         }
         public Task<bool> Create(Quote item)
         {
@@ -22,11 +27,15 @@ namespace QuoteApi.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Quote> Get(int id)
+        public Task<List<Quote>> GetAll()
         {
-            throw new NotImplementedException();
+            return this.AppContext.Quotes.ToListAsync();
+
         }
 
-        
+        public async Task<Quote> Get(int id)
+        {
+            return await this.AppContext.Quotes.Where(c => c.Id == id).FirstOrDefaultAsync();
+        }
     }
 }

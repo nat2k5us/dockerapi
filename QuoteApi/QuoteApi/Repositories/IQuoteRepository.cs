@@ -11,10 +11,12 @@
 
         Task<Quote> Get(int id);
 
+        Task<List<Quote>> GetAll();
+
 
         Task<bool> Create(Quote item);
 
-        
+
         Task<bool> Delete(int id);
     }
 }

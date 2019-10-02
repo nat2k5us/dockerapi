@@ -24,8 +24,9 @@ namespace QuoteApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-           var data =  quoteRepository.Get(1);
-            return new string[] { data.Result.ToString(), "value2" };
+           var data =  quoteRepository.GetAll();
+            var value1 = data.Result.ToString();
+            return new string[] { value1, "value2" };
         }
 
         // GET api/values/5

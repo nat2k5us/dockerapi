@@ -7,7 +7,7 @@ services:
     entrypoint: /bin/bash
 
   sqlserver:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:latest
     restart: always
     ports:
         - 1833:1433

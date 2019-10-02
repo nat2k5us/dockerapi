@@ -10,7 +10,8 @@ namespace Quote.DataAccess.DbLayers
     public class QuoteDbContext : DbContext
     {
         private readonly string connectionString;
-        public QuoteDbContext(string connectionString)         {
+        public QuoteDbContext(string connectionString)
+        {
             this.connectionString = connectionString;
         }
         public QuoteDbContext()
@@ -30,7 +31,7 @@ namespace Quote.DataAccess.DbLayers
             if (!optionsBuilder.IsConfigured)
             {
                 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source = 10.9.30.28, 1833; Initial Catalog = MyTestDB; User ID = sa; Password = Password12!;");
+                optionsBuilder.UseSqlServer("Data Source=192.168.86.71,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
             }
         }
 
@@ -46,7 +47,7 @@ namespace Quote.DataAccess.DbLayers
         public QuoteDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<QuoteDbContext>();
-            optionsBuilder.UseSqlServer("Data Source = 10.9.30.28, 1833; Initial Catalog = MyTestDB; User ID = sa; Password = Password12!;");
+            optionsBuilder.UseSqlServer("Data Source=192.168.86.71,1833;Initial Catalog=MyTestDB;User ID=sa;Password=Password12!;");
             return new QuoteDbContext(optionsBuilder.Options);
         }
     }

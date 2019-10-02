@@ -1,7 +1,8 @@
-USE Prime;
+USE MyTestDB;
 GO
 
-CREATE TABLE MyTable(
+CREATE TABLE MyTable
+(
   Id nvarchar(max),
   Value nvarchar(max)
 );
