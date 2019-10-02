@@ -9,12 +9,12 @@ namespace QuoteApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class QuotesController : ControllerBase
     {
 
         private IQuoteRepository quoteRepository;
 
-        public ValuesController(IQuoteRepository repo)
+        public QuotesController(IQuoteRepository repo)
         {
             this.quoteRepository = repo;
            
@@ -32,20 +32,33 @@ namespace QuoteApi.Controllers
             catch (Exception ex)
             {
                 throw ex;
+            }
+            return this.Ok(allQuotes);            
+        }
+
+        [HttpGet]
+        [Route("{symbol}")]
+        public async Task<IActionResult> Get(string symbol)
+        {
+            var quote = new Quote.DataAccess.Models.Quote();
+            try
+            {
+                quote = await quoteRepository.Get(symbol);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
 
             }
-            return this.Ok(allQuotes);
-          
-           
-            
+            return this.Ok(quote);
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
+     // GET api/values/5
+     //   [HttpGet("{id}")]
+     //   public ActionResult<string> Get(int id)
+     //   {
+     //       return "value";
+     //   }
 
         // POST api/values
         [HttpPost]

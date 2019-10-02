@@ -37,5 +37,10 @@ namespace QuoteApi.Repositories
         {
             return await this.AppContext.Quotes.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
+
+        public async Task<Quote> Get(string id)
+        {
+            return await this.AppContext.Quotes.Where(c => c.Symbol == id).FirstOrDefaultAsync();
+        }
     }
 }
